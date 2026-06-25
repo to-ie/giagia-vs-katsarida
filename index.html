@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0d0d10" />
+  <title>Γιαγιά vs Κατσαρίδα</title>
+  <link rel="icon" href="cockroach.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="board">
+    <p class="kicker">★ MAIN EVENT ★</p>
+    <h1 class="title">Γιαγιά <span class="vs">VS</span> Κατσαρίδα</h1>
+
+    <section class="arena">
+      <!-- Red corner: Γιαγιά -->
+      <div class="fighter red">
+        <span class="corner">RED CORNER</span>
+        <div class="portrait">
+          <picture>
+            <source srcset="giagia.webp" type="image/webp" />
+            <img src="giagia.png" alt="Γιαγιά" />
+          </picture>
+        </div>
+        <p class="name">Γιαγιά</p>
+        <div class="controls">
+          <button class="btn minus" data-side="giagia" data-delta="-1" aria-label="Αφαίρεση πόντου από Γιαγιά">−</button>
+          <button class="btn plus" data-side="giagia" data-delta="1" aria-label="Πόντος στη Γιαγιά">+</button>
+        </div>
+      </div>
+
+      <!-- Score -->
+      <div class="score">
+        <span id="score-giagia">0</span>
+        <span class="dash">:</span>
+        <span id="score-roach">0</span>
+      </div>
+
+      <!-- Blue corner: Κατσαρίδα -->
+      <div class="fighter blue">
+        <span class="corner">BLUE CORNER</span>
+        <div class="portrait">
+          <picture>
+            <source srcset="cockroach.webp" type="image/webp" />
+            <img src="cockroach.png" alt="Κατσαρίδα" />
+          </picture>
+        </div>
+        <p class="name">Κατσαρίδα</p>
+        <div class="controls">
+          <button class="btn minus" data-side="roach" data-delta="-1" aria-label="Αφαίρεση πόντου από Κατσαρίδα">−</button>
+          <button class="btn plus" data-side="roach" data-delta="1" aria-label="Πόντος στην Κατσαρίδα">+</button>
+        </div>
+      </div>
+    </section>
+
+    <p class="tagline" id="tagline">Tap + every time Γιαγιά squashes one. 🩴</p>
+
+    <button class="save" id="save">💾 SAVE SCORE</button>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden>
+      ✅ Saved! This will be updated in a few minutes — be patient. 🥊
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
